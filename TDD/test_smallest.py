@@ -1,5 +1,5 @@
 import unittest
-from smallest import smallest
+from TDD.smallest import smallest
 
 class TestSmallest(unittest.TestCase):
     def test_smallest(self):
