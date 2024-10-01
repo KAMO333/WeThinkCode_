@@ -19,5 +19,11 @@ def is_password_secure(password):
     
     if not re.search(digit, password):
         return False
+    
+    # Must contain at least one special character
+    special_char = r'[!@#$%^&*(),.?":{}|<>]'
+
+    if not re.search(special_char, password):
+        return False
 
     return True
