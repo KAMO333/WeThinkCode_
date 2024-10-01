@@ -14,5 +14,10 @@ def is_password_secure(password):
     if not re.search(upper_case, password) or not re.search(lower_case, password):
         return False
 
+    # Must contain at least one digit
+    digit = r'\d'
     
+    if not re.search(digit, password):
+        return False
+
     return True
