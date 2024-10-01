@@ -8,3 +8,12 @@ class TestPasswordValidator(unittest.TestCase):
         self.assertEqual(is_password_secure("eight_ch"), False)  # Missing uppercase, digit, special char
         self.assertEqual(is_password_secure(""), False)          # Empty string
 
+
+    
+    # Contains both uppercase and lowercase letters
+    def test_upper_char(self):
+        self.assertTrue(is_password_secure("EightChar1!"), "Expecting True")  # Valid password
+        self.assertFalse(is_password_secure("eight_char1!"), "Expecting False")  # No uppercase
+        self.assertFalse(is_password_secure("EIGHT_CHAR1!"), "Expecting False")  # No lowercase
+
+
