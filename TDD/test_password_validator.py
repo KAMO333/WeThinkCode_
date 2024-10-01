@@ -21,4 +21,13 @@ class TestPasswordValidator(unittest.TestCase):
         self.assertTrue(is_password_secure("EightChar1!"), "Expecting True")  # Valid password
         self.assertFalse(is_password_secure("EightChar!"), "Expecting False")  # No digit
 
+    # Has at least one special character
+    def test_special_char(self):
+        self.assertTrue(is_password_secure("EightChar1!"), "Was expecting True")  # Valid password
+        self.assertFalse(is_password_secure("EightChar1"), "Was expecting False")  # No special char
+
+if __name__ == '__main__':
+    unittest.main()
+
+
 
