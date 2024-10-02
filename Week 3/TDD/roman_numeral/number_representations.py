@@ -1,4 +1,8 @@
 def to_roman_numeral(number):
+    # Check if the input is an integer
+    if not isinstance(number, int):
+        raise TypeError("Input must be an integer.")
+
     roman_numbers = {
         1000: 'M', 900: 'CM', 500: 'D', 400: 'CD',
         100: 'C', 90: 'XC', 50: 'L', 40: 'XL',
