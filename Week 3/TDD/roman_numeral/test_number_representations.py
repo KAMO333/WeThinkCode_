@@ -22,4 +22,9 @@ class TestToRomanNumeral(unittest.TestCase):
         self.assertEqual(to_roman_numeral(400), "CD")
         self.assertEqual(to_roman_numeral(900), "CM")
 
+    def test_quadruple(self):
+        self.assertEqual(to_roman_numeral(1994), "MCMXCIV")
+        self.assertEqual(to_roman_numeral(3999), "MMMCMXCIX")
+
+
 
