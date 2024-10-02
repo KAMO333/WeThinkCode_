@@ -32,6 +32,12 @@ class TestToRomanNumeral(unittest.TestCase):
         with self.assertRaises(TypeError):
             to_roman_numeral("ten") 
 
+    def test_invalid_float(self):
+        # Floats should raise an error
+        with self.assertRaises(TypeError):
+            to_roman_numeral(10.5) 
+
+
 
 
 
