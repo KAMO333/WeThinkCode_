@@ -37,6 +37,15 @@ class TestToRomanNumeral(unittest.TestCase):
         with self.assertRaises(TypeError):
             to_roman_numeral(10.5) 
 
+    def test_invalid_values(self):
+        # Negative numbers should raise an error
+        with self.assertRaises(ValueError):
+            to_roman_numeral(-1)  
+        # Numbers greater than 3999 should raise an error
+        with self.assertRaises(ValueError):
+            to_roman_numeral(4000)
+
+
 
 
 
