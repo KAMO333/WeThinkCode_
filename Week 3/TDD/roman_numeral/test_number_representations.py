@@ -26,5 +26,12 @@ class TestToRomanNumeral(unittest.TestCase):
         self.assertEqual(to_roman_numeral(1994), "MCMXCIV")
         self.assertEqual(to_roman_numeral(3999), "MMMCMXCIX")
 
+    # Tests for invalid types like string and float
+    def test_invalid_string(self):
+        # Strings should raise an error
+        with self.assertRaises(TypeError):
+            to_roman_numeral("ten") 
+
+
 
 
