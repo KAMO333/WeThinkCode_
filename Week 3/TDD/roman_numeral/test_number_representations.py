@@ -16,3 +16,10 @@ class TestToRomanNumeral(unittest.TestCase):
         self.assertEqual(to_roman_numeral(27), "XXVII")
         self.assertEqual(to_roman_numeral(40), "XL")
 
+    def test_triple_digits(self):
+        self.assertEqual(to_roman_numeral(90), "XC")
+        self.assertEqual(to_roman_numeral(148), "CXLVIII")
+        self.assertEqual(to_roman_numeral(400), "CD")
+        self.assertEqual(to_roman_numeral(900), "CM")
+
+
