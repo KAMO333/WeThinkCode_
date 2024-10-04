@@ -4,3 +4,11 @@ def change(amount_due, amount_paid):
     if amount_paid < amount_due: return 'Insufficient fund' 
 
     change_is = amount_due - amount_paid
+
+    # Find a combination of cash denominations
+    combination = find_combination(cash, change_is)
+
+    return combination
+
+def find_combination(cash, change_is):
+    pass
