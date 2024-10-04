@@ -14,3 +14,14 @@ def find_combination(cash, change_is):
     values = [int(value[1:]) * 100 if 'c' not in value else int(value[:-1]) for value in cash]
     combination = []
 
+    # Sort in descending order (highest denomination first)
+    sort_list = sorted(values, reverse=True)
+
+    for value in sort_list:
+        # Use the current denomination as many times as possible
+        while change_is >= value:
+            change_is -= value
+            # Find the corresponding denomination in the cash list
+            corresponding_denotation = cash[values.index(value)]
+            combination.append(corresponding_denotation)
+
