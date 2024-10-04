@@ -20,5 +20,10 @@ class TestChange(unittest.TestCase):
         self.assertEqual(change(30000, 50000), {'R200': 1})
         self.assertEqual(change(2500, 7500), {'R50': 1})
         self.assertEqual(change(15500, 20000), {'R20': 2, 'R5': 1})
+    
+    def test_no_change(self):
+        self.assertEqual(change(15000, 15000), 'There is no change')
+        self.assertEqual(change(750, 750), 'There is no change')
+        self.assertEqual(change(1992, 1992), 'There is no change')
 
 
