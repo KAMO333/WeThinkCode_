@@ -25,5 +25,10 @@ class TestChange(unittest.TestCase):
         self.assertEqual(change(15000, 15000), 'There is no change')
         self.assertEqual(change(750, 750), 'There is no change')
         self.assertEqual(change(1992, 1992), 'There is no change')
+    
+    def test_short_change(self):
+        self.assertEqual(change(15000, 1000), 'Insufficient funds')
+        self.assertEqual(change(5000, 554), 'Insufficient funds')
+        self.assertEqual(change(200, 50), 'Insufficient funds')
 
 
