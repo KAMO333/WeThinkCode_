@@ -25,3 +25,15 @@ def find_combination(cash, change_is):
             corresponding_denotation = cash[values.index(value)]
             combination.append(corresponding_denotation)
 
+    
+    result = {}
+    
+    # Count occurrences of each denomination and store them in a dictionary
+    for money in combination:
+        if money in result:
+            result[money] += 1
+        else:
+            result[money] = 1
+
+    return 'There is no change' if len(result) == 0 else result
+
