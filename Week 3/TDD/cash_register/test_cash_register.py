@@ -15,3 +15,10 @@ class TestChange(unittest.TestCase):
         self.assertEqual(change(2550, 6000), {'R20': 1, 'R10': 1, 'R2': 2, '50c': 1})
         self.assertEqual(change(600, 1200), {'R5':1, 'R1': 1})
 
+    def test_large_change(self):
+        self.assertEqual(change(4700, 10000), {'R50': 1, 'R2': 1, 'R1': 1})
+        self.assertEqual(change(30000, 50000), {'R200': 1})
+        self.assertEqual(change(2500, 7500), {'R50': 1})
+        self.assertEqual(change(15500, 20000), {'R20': 2, 'R5': 1})
+
+
