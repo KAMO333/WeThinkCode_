@@ -11,4 +11,6 @@ def change(amount_due, amount_paid):
     return combination
 
 def find_combination(cash, change_is):
-    pass
+    values = [int(value[1:]) * 100 if 'c' not in value else int(value[:-1]) for value in cash]
+    combination = []
+
